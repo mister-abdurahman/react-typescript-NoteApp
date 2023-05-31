@@ -1,5 +1,0 @@
-We use BrowserRouter (from react-router-dom) in the main, and route&routes in components to configure routing in react.
-
-We specified routes for different views and also set any unset route to home.
-
-my-4: bootstrap. margin-top & bottom

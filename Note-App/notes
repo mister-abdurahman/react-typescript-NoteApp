@@ -1,0 +1,13 @@
+We use BrowserRouter (from react-router-dom) in the main, and route&routes in components to configure routing in react.
+
+We specified routes for different views and also set any unset route to home.
+
+my-4: bootstrap. margin-top & bottom
+
+We used the react-select library for the tag select functionality
+
+Link from react-router is used to move from one page to another like moving back one step to our previous page
+
+We'r using ref so that we can go to our form and to make sure that our form actually does something. So the values inside our form.control for both title and textarea are being stored in the jsx ref attribute and automatically replaces the default set.
+
+Apparently 'FormEvent' is a thing and its from react too
