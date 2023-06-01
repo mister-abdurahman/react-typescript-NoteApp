@@ -44,6 +44,13 @@ export default function NoteForm({ onSubmit }: NoteFormProps) {
                   return { value: tag.id, label: tag.label };
                   // 19:00
                 })}
+                onChange={(tags) => {
+                  setSelectedTags(
+                    tags.map((tag) => {
+                      return { id: tag.value, label: tag.label };
+                    })
+                  );
+                }}
                 isMulti
               />
             </Form.Group>
