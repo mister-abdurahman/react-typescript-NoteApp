@@ -41,10 +41,10 @@ function App() {
           element={
             <>
               <h1>Home</h1>
-              <Test
+              {/* <Test
                 render={(item: string) => <span>{item}</span>}
                 items={["React", "Typescript", "Javascript", "Jira"]}
-              />
+              /> */}
             </>
           }
         />

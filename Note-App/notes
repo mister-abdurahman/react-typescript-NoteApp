@@ -13,3 +13,9 @@ We'r using ref so that we can go to our form and to make sure that our form actu
 Apparently 'FormEvent' is a thing and its from react too
 
 In CreatableReactSelect, onChange gets direct access to value in its call back fn.
+
+Data passed inside a react element can be referred to as children and can be accessed as such from other components
+
+To understand typescript with react, use the approach of: components are templates created to be used on their own or elsewhere, and they are made by preparing them for whatever data they would be accepting by setting data types where necessary and generics where we arent sure of the data format.
+
+For a generic to work, you need to mention what the data would be at some point (or not if we're calling it in another component, honestly it all depends.)
