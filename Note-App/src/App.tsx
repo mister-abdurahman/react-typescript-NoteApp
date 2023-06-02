@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import { Route, Routes, Navigate } from "react-router-dom";
 import NewNote from "./NewNote";
+import { UseLocalStorage } from "./UseLocalStorage";
+import { Test } from "./Test";
 
 export type Note = {
   id: string;
@@ -10,6 +12,7 @@ export type Note = {
 export type RawNote = {
   id: string;
 };
+
 export type RawNoteData = {
   id: string;
   markdown: string;
@@ -21,17 +24,30 @@ export type NoteData = {
   markdown: string;
   tags: Tag[];
 };
+
 export type Tag = {
   id: string;
   label: string;
 };
 
 function App() {
-  const [notes, setNotes] = useLocalStorage<RawNote[]>("notes", []);
+  const [notes, setNotes] = UseLocalStorage<RawNote[]>("NOTES", []);
+  const [tags, setTags] = UseLocalStorage<Tag[]>("TAGS", []);
   return (
     <Container className="my-4">
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route
+          path="/"
+          element={
+            <>
+              <h1>Home</h1>
+              <Test
+                render={(item: string) => <span>{item}</span>}
+                items={["React", "Typescript", "Javascript", "Jira"]}
+              />
+            </>
+          }
+        />
         <Route path="/new" element={<NewNote />} />
         <Route path="/:id">
           <Route index element={<h1>Show</h1>} />
